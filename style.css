@@ -13,10 +13,11 @@ a {
   text-decoration: none;
 }
 header {
-  /* Делаем фон серым */
+  
   background: #f6f6f6;
   padding: 22px; 0;
 }
+
 .header-container {
   width:  90%;
   margin: 0 auto;
@@ -24,17 +25,19 @@ header {
   justify-content: space-between;
  
 }
+
 .header-container a{
- 
   color: #000;
   font-size: 16px;
   margin-right: 63px;
   padding: 27px 6px;
 }
+
 .header-container a:hover {
   
   background: #ffea00;
 }
+
 #menu-checkbox{
  
   display: none;
@@ -42,6 +45,7 @@ header {
 ul {
   display: flex;
 }
+
 nav {
   margin-top: 20px;
 }
@@ -53,20 +57,23 @@ nav {
   padding-bottom: 280px;
 
 }
+
 .top-slide h2 {
   background: #ffea00;
   display: inline;
   font-size: 70px;
   padding: 0 13px;
 }
+
 .top-container {
-  width: 85%; /* Ширина */
+  width: 85%;
   margin: 0 auto;
 }
-.top-slide :nth-child(2)
-{
+
+.top-slide :nth-child(2){
   margin-bottom: 10px;
 }
+
 .top-slide p {
   background: #414146;
   display: inline;
@@ -94,12 +101,14 @@ nav {
   font-size: 20px;
   color: white;
 }
+
 .bottom-card{
     background: #414146;
     position: relative;
     top: -30px;
   
 }
+
 .specialize-card{
   display: flex;
   justify-content: space-between;
@@ -112,7 +121,7 @@ nav {
 .topcard{
   background-color: #ffea00;
   display: center;
-  overflow: hidden;﻿
+  overflow: hidden;
 }
 
 #second-p {
@@ -162,7 +171,7 @@ text-align: center;
   content: ' ';
 }
 
- .posts /* настраиваем картинки */{
+ .posts{
   width: 90%;
   display: grid;
   margin: 0 auto;
@@ -216,7 +225,7 @@ text-align: center;
   font-size: 12px;
   
 }
-.main-menu a 
+.main-menu a {
   display: block;
   padding: 8px;
   
