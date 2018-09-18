@@ -1,0 +1,307 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+  display: flex;
+  /*
+http://css.yoksel.ru/flexbox/
+  http://yoksel.github.io/flex-cheatsheet/#display
+  Шпаргалка по отоображению флексов */
+}
+a {
+  text-decoration: none;
+}
+header {
+  /* Делаем фон серым */
+  background: #f6f6f6;
+  padding: 22px; 0;
+}
+.header-container {
+  width:  90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  /*CSS свойство  justify-content определяет,
+   как браузер распределяет пространство между
+   и вокруг элементов контента
+  вдоль главной оси их контейнера. */
+}
+.header-container a{
+  /* Определяем как будет выглядить меню */
+  color: #000;
+  font-size: 16px;
+  margin-right: 63px;
+  padding: 27px 6px;
+}
+.header-container a:hover {
+  /* Подцветка при наведении курсора  */
+  background: #ffea00;
+}
+#menu-checkbox{
+  /* Прячет чекбокс */
+  display: none;
+}
+ul {
+  display: flex;
+}
+nav {
+  margin-top: 20px;
+}
+
+.top-slide {
+  background: url(img/slider_bg.jpg) no-repeat;
+  /* Значение no-repeat Позволяет не накладывать
+  еще ту же картинку, если не хватает размера у первой */
+  padding-top: 120px;
+  padding-bottom: 280px;
+
+}
+.top-slide h2 {
+  background: #ffea00;
+  display: inline;
+  font-size: 70px;
+  padding: 0 13px;
+}
+.top-container {
+  width: 85%; /* Ширина */
+  margin: 0 auto;
+}
+.top-slide :nth-child(2)
+/* В данном коде мы выбираем подкласс
+класса ТОП-СЛАЙД а именно 2 подкласс
+<div><h2>IN QUALITY DESIGN</h2></div>
+Что дает нам возможность сделать отступ
+именно от этого куска текста */{
+  margin-bottom: 10px;
+}
+.top-slide p {
+  background: #414146;
+  display: inline;
+  font-size: 24px;
+  color: white;
+  padding: 0 4px;
+}
+
+.specialize-container {
+  width: 80%;
+  margin:  0 auto;
+  text-align: center;
+}
+.specialize-container h3 {
+  font-size: 35px;
+}
+
+.specialize-container p{
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.first-p {
+  font-size: 20px;
+  color: white;
+}
+.bottom-card{
+    background: #414146;
+    position: relative;
+    top: -30px;
+    /* поднял текст к картинке
+    не работает без   position: relative; */
+}
+.specialize-card{
+  display: flex;
+  justify-content: space-between;
+}
+
+.pic-txt{
+  background: #ffea00;
+}
+
+.topcard{
+  background-color: #ffea00;
+  display: center;
+  overflow: hidden;﻿
+}
+
+#second-p {
+  font-size: 13px;
+  color: white;
+  display: inline-flex;
+  margin-bottom: 12px;
+}
+
+#bottom-card {
+  position: relative;
+  top: -11px;
+}
+
+.portfolio {
+width: 90%;
+margin: 0 auto;
+text-align: center; /* Централизует текс */
+}
+
+.portfolio h4
+{
+  font-size: 18px;
+  background: #424147;
+  color: #f5e10c;
+  display: inline-block;
+  padding: 0px 8px;
+}
+
+.portfolio p {
+  font-size: 16px;
+  color: #717174;
+}
+
+.toggles button{
+  color: #424147;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 20px 5px;
+}
+
+.toggles button:after{
+  content: ' / ';
+}
+.toggles button:last-child:after{
+  content: ' ';
+}
+
+ .posts /* настраиваем картинки */{
+  width: 90%;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: auto auto auto auto;
+ }
+
+
+.brand-slider {
+width: 90%;
+margin: 0 auto;
+text-align: center; /* Централизует текс */
+
+}
+
+.brand-slider h4
+{
+  font-size: 18px;
+  background: #424147;
+  color: #f5e10c;
+  display: inline-block;
+  padding: 0px 8px;
+  margin-top: 40px;
+}
+
+.brand-slider p {
+  font-size: 16px;
+  color: #717174;
+}
+
+
+
+
+
+
+
+/*Следующий @media ссылает на то что будет происходить с меню при уменьшении экрана браузера
+до 420px */
+@media screen and ( max-width: 420px) {
+.header-container{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.main-menu{
+  display: none;
+  /*Данное действие убирает меню с кнопка ДОМОЙ О НАС и т.д
+  иначе они будут налазить друг на друга */
+}
+.main-menu li{
+  width: 100%;
+  display: block;
+  font-size: 12px;
+  /* Задает стиль меню в момент когда оно будет показыватся */
+}
+.main-menu a /* Без а нее кнопка меню есть, но остальное меню так-же отоображается*/{
+  display: block;
+  padding: 8px;
+  /* Добавляет конпку МЕНЮ */
+}
+.toggle-button {
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  color: #000;
+  margin-top: 20px;
+  /* Стилизует кнопку МЕНЮ, дает ей цвет, отступ сверху в виде 20пх */
+}
+.toggle-button:after{
+  content: attr(data-open)
+  /* Функция attr() применяется для добавления значения атрибута HTML-элемента в стилевое свойство.
+   Например, можно получить значение атрибута class,
+   а затем использовать его в качестве значения свойства background для изменения цвета.
+   !! ТОБИШ включает свойство ДАТА */;
+  display: block;
+}
+#menu-checkbox:checked + nav[role="navigation"] .main-menu{
+  /* Атрибут  role в HTML5 позволяет наиболее четко указать
+   семантическое предназначение блока/элемента страницы при взаимодействии пользователя с сайтом
+   navigation — набор элементов предназначенных для навигации по документу или связанным документам.
+    Рекомендуется использовать не больше одного раза на странице. */
+  display: block;
+}
+/*Добовляет эффект по клику в виде выпадающего меню */
+#menu-checkbox:checked + nav[role="navigation"] .toggle-button:after{
+  content: attr(data-close);
+}
+/*Закрывает меню */
+.header-container a{
+  margin-right: -65px;
+  top: 30px;
+  right: 115px
+  /*Рассположение выподающего меню */
+}
+
+.top-slide {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+}
+
+.top-slide h2 {
+    font-size: 32px;
+  }
+
+  .top-slide p {
+      font-size: 16px;
+  }
+  .specialize-container p {
+    font-size: 16px;
+  }
+
+  .specialize-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+  }
+.bottom-card {
+  width: 250px;
+  margin: 0 auto;
+}
+
+.posts {
+ width: 90%;
+ display: grid;
+ margin: 0 auto;
+ grid-template-columns: auto;
+}
+}
