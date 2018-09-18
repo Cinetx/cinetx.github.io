@@ -8,10 +8,6 @@ body {
 li {
   list-style: none;
   display: flex;
-  /*
-http://css.yoksel.ru/flexbox/
-  http://yoksel.github.io/flex-cheatsheet/#display
-  Шпаргалка по отоображению флексов */
 }
 a {
   text-decoration: none;
@@ -26,24 +22,21 @@ header {
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  /*CSS свойство  justify-content определяет,
-   как браузер распределяет пространство между
-   и вокруг элементов контента
-  вдоль главной оси их контейнера. */
+ 
 }
 .header-container a{
-  /* Определяем как будет выглядить меню */
+ 
   color: #000;
   font-size: 16px;
   margin-right: 63px;
   padding: 27px 6px;
 }
 .header-container a:hover {
-  /* Подцветка при наведении курсора  */
+  
   background: #ffea00;
 }
 #menu-checkbox{
-  /* Прячет чекбокс */
+ 
   display: none;
 }
 ul {
@@ -55,8 +48,7 @@ nav {
 
 .top-slide {
   background: url(img/slider_bg.jpg) no-repeat;
-  /* Значение no-repeat Позволяет не накладывать
-  еще ту же картинку, если не хватает размера у первой */
+ 
   padding-top: 120px;
   padding-bottom: 280px;
 
@@ -72,11 +64,7 @@ nav {
   margin: 0 auto;
 }
 .top-slide :nth-child(2)
-/* В данном коде мы выбираем подкласс
-класса ТОП-СЛАЙД а именно 2 подкласс
-<div><h2>IN QUALITY DESIGN</h2></div>
-Что дает нам возможность сделать отступ
-именно от этого куска текста */{
+{
   margin-bottom: 10px;
 }
 .top-slide p {
@@ -110,8 +98,7 @@ nav {
     background: #414146;
     position: relative;
     top: -30px;
-    /* поднял текст к картинке
-    не работает без   position: relative; */
+  
 }
 .specialize-card{
   display: flex;
@@ -143,7 +130,7 @@ nav {
 .portfolio {
 width: 90%;
 margin: 0 auto;
-text-align: center; /* Централизует текс */
+text-align: center; 
 }
 
 .portfolio h4
@@ -186,7 +173,7 @@ text-align: center; /* Централизует текс */
 .brand-slider {
 width: 90%;
 margin: 0 auto;
-text-align: center; /* Централизует текс */
+text-align: center; 
 
 }
 
@@ -211,8 +198,8 @@ text-align: center; /* Централизует текс */
 
 
 
-/*Следующий @media ссылает на то что будет происходить с меню при уменьшении экрана браузера
-до 420px */
+
+
 @media screen and ( max-width: 420px) {
 .header-container{
   width: 100%;
@@ -221,19 +208,18 @@ text-align: center; /* Централизует текс */
 }
 .main-menu{
   display: none;
-  /*Данное действие убирает меню с кнопка ДОМОЙ О НАС и т.д
-  иначе они будут налазить друг на друга */
+  
 }
 .main-menu li{
   width: 100%;
   display: block;
   font-size: 12px;
-  /* Задает стиль меню в момент когда оно будет показыватся */
+  
 }
-.main-menu a /* Без а нее кнопка меню есть, но остальное меню так-же отоображается*/{
+.main-menu a 
   display: block;
   padding: 8px;
-  /* Добавляет конпку МЕНЮ */
+  
 }
 .toggle-button {
   text-align: center;
@@ -241,33 +227,27 @@ text-align: center; /* Централизует текс */
   cursor: pointer;
   color: #000;
   margin-top: 20px;
-  /* Стилизует кнопку МЕНЮ, дает ей цвет, отступ сверху в виде 20пх */
+
 }
 .toggle-button:after{
   content: attr(data-open)
-  /* Функция attr() применяется для добавления значения атрибута HTML-элемента в стилевое свойство.
-   Например, можно получить значение атрибута class,
-   а затем использовать его в качестве значения свойства background для изменения цвета.
-   !! ТОБИШ включает свойство ДАТА */;
+  
   display: block;
 }
 #menu-checkbox:checked + nav[role="navigation"] .main-menu{
-  /* Атрибут  role в HTML5 позволяет наиболее четко указать
-   семантическое предназначение блока/элемента страницы при взаимодействии пользователя с сайтом
-   navigation — набор элементов предназначенных для навигации по документу или связанным документам.
-    Рекомендуется использовать не больше одного раза на странице. */
+  
   display: block;
 }
-/*Добовляет эффект по клику в виде выпадающего меню */
+
 #menu-checkbox:checked + nav[role="navigation"] .toggle-button:after{
   content: attr(data-close);
 }
-/*Закрывает меню */
+
 .header-container a{
   margin-right: -65px;
   top: 30px;
   right: 115px
-  /*Рассположение выподающего меню */
+  
 }
 
 .top-slide {
