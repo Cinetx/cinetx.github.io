@@ -1,14 +1,14 @@
-$(function() { //создаем функцию
-  $('.toggles button').click(function(){ //с эффектом при клики на класс toggles и button
+$(function() { 
+  $('.toggles button').click(function(){ 
     var getId = this.id;
     var getCurrent = $('.posts .' + getId);
 
     $('.post').not(getCurrent).hide(500);
-    getCurrent.show(500); //обращаемся к классу .ПОСТ при клики показывал одинаковые классы
+    getCurrent.show(500); 
   });
 
   $('#showall').click(function() {
-    $('.post').show(500); //Показывать все
+    $('.post').show(500); 
   });
 });
 
